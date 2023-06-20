@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Table</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Interactive Dynamic Multiplication Table</h1>
+  <h3>Enter integer values between 1 and 50<br>Make sure that the lower bounds are smaller than the upper bounds!<br>No special characters or non-integer inputs are allowed.<br>If you enter a decimal such as '6.3', then the program will round it down to '6'</h3>
+  <h4>If you leave any of the fields blank or enter a non-integer character, an error message will display.</h4>
+
+  <form id="boundsForm">
+    <label for="clbound">Column Lower Bound:</label>
+    <input type="text" id="clbound" name="clbound">
+    <div id="clSlider"></div>
+    <br>
+    <label for="cubound">Column Upper Bound:</label>
+    <input type="text" id="cubound" name="cubound">
+    <div id="cuSlider"></div>
+    <br>
+    <label for="rlbound">Row Lower Bound:</label>
+    <input type="text" id="rlbound" name="rlbound">
+    <div id="rlSlider"></div>
+    <br>
+    <label for="rubound">Row Upper Bound:</label>
+    <input type="text" id="rubound" name="rubound">
+    <div id="ruSlider"></div>
+  </form>
+  
+  <div id="isEmptyError"></div>
+  <div id="lowerBoundError"></div>
+  <div id="validationError"></div>
+  <div id="multiTable"></div>
+</body>
+</html>
